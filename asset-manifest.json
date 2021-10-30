@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/AXA-assessment/static/css/main.9965aedf.chunk.css",
+    "main.js": "/AXA-assessment/static/js/main.79eb5870.chunk.js",
+    "main.js.map": "/AXA-assessment/static/js/main.79eb5870.chunk.js.map",
+    "runtime-main.js": "/AXA-assessment/static/js/runtime-main.61512298.js",
+    "runtime-main.js.map": "/AXA-assessment/static/js/runtime-main.61512298.js.map",
+    "static/js/2.e8f8ae3c.chunk.js": "/AXA-assessment/static/js/2.e8f8ae3c.chunk.js",
+    "static/js/2.e8f8ae3c.chunk.js.map": "/AXA-assessment/static/js/2.e8f8ae3c.chunk.js.map",
+    "static/js/3.84c99c65.chunk.js": "/AXA-assessment/static/js/3.84c99c65.chunk.js",
+    "static/js/3.84c99c65.chunk.js.map": "/AXA-assessment/static/js/3.84c99c65.chunk.js.map",
+    "index.html": "/AXA-assessment/index.html",
+    "static/css/main.9965aedf.chunk.css.map": "/AXA-assessment/static/css/main.9965aedf.chunk.css.map",
+    "static/js/2.e8f8ae3c.chunk.js.LICENSE.txt": "/AXA-assessment/static/js/2.e8f8ae3c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.61512298.js",
+    "static/js/2.e8f8ae3c.chunk.js",
+    "static/css/main.9965aedf.chunk.css",
+    "static/js/main.79eb5870.chunk.js"
+  ]
+}
