@@ -8,6 +8,28 @@ body {
   background-color: #0f0f3d;
 }
 
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #373b69;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search {
+  background-color: transparent;
+  color: #0f0f3d;
+  border: 2px solid #0f0f3d;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 1.5rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -52,8 +74,13 @@ code {
   left: 0;
   right: 0;
   padding: 1rem;
-  transform: translateY(100%);
+  transform: translateY(102%);
   transition: transform 0.3s ease-in-out;
+  overflow: auto;
+  max-height: 100%;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .gnome:hover .gnome-info {

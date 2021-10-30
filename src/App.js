@@ -18,11 +18,16 @@ function App() {
   }, []);
 
   return (
-    <div className="gnome-container">
-      {gnomes.map((gnome) => (
-        <Gnome key={gnome.id} {...gnome} />
-      ))}
-    </div>
+    <>
+      <header>
+        <input className="search" type="search" placeholder="Search" />
+      </header>
+      <div className="gnome-container">
+        {gnomes.map((gnome) => (
+          <Gnome key={gnome.id} {...gnome} />
+        ))}
+      </div>
+    </>
   );
 }
 
