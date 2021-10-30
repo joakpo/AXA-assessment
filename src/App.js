@@ -19,8 +19,9 @@ function App() {
 
   return (
     <div className="gnome-container">
-      {gnomes.length > 0 &&
-        gnomes.map((gnome) => <Gnome key={gnome.id} {...gnome} />)}
+      {gnomes.map((gnome) => (
+        <Gnome key={gnome.id} {...gnome} />
+      ))}
     </div>
   );
 }
