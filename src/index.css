@@ -22,7 +22,7 @@ header {
 
 .search {
   background-color: transparent;
-  color: #0f0f3d;
+  color: white;
   border: 2px solid #0f0f3d;
   border-radius: 50px;
   font-family: inherit;
@@ -74,7 +74,7 @@ code {
   left: 0;
   right: 0;
   padding: 1rem;
-  transform: translateY(102%);
+  transform: translateY(102%); /*Making the info going up*/
   transition: transform 0.3s ease-in-out;
   overflow: auto;
   max-height: 100%;

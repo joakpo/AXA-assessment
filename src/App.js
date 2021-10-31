@@ -7,6 +7,7 @@ const JSON_URL =
 
 function App() {
   const [gnomes, setGnomes] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch(JSON_URL)
@@ -17,10 +18,30 @@ function App() {
       });
   }, []);
 
+  const handleOnSubmit = (e) => {
+    fetch(JSON_URL + searchTerm)
+      .then((res) => res.json())
+      .then((data) => {
+        setGnomes(data.Brastlewark);
+      });
+  };
+
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <>
       <header>
-        <input className="search" type="search" placeholder="Search" />
+        <form onSubmit={handleOnSubmit}>
+          <input
+            className="search"
+            type="search"
+            placeholder="Search"
+            value={searchTerm}
+            onChange={handleOnChange}
+          />
+        </form>
       </header>
       <div className="gnome-container">
         {gnomes.map((gnome) => (
