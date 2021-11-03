@@ -1,30 +1,17 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useMemo, useState } from "react";
 import Gnome from "./components/gnomes";
-
-const JSON_URL =
-  "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json";
+import Pagination from "./components/Pagination";
+import useGnomes from "./Hooks/useGnomes";
 
 function App() {
-  const [gnomes, setGnomes] = useState([]);
+  const gnomes = useGnomes();
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    fetch(JSON_URL)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setGnomes(data.Brastlewark);
-      });
-  }, []);
-
-  const handleOnSubmit = (e) => {
-    fetch(JSON_URL + searchTerm)
-      .then((res) => res.json())
-      .then((data) => {
-        setGnomes(data.Brastlewark);
-      });
-  };
+  const gnomesToShow = useMemo(() => {
+    return gnomes.filter(
+      (g) => g.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1
+    );
+  }, [gnomes, searchTerm]);
 
   const handleOnChange = (e) => {
     setSearchTerm(e.target.value);
@@ -33,7 +20,7 @@ function App() {
   return (
     <>
       <header>
-        <form onSubmit={handleOnSubmit}>
+        <form onSubmit={(e) => e.preventDefault()}>
           <input
             className="search"
             type="search"
@@ -43,10 +30,18 @@ function App() {
           />
         </form>
       </header>
-      <div className="gnome-container">
-        {gnomes.map((gnome) => (
-          <Gnome key={gnome.id} {...gnome} />
-        ))}
+      <div>
+        {gnomesToShow.length > 0 ? (
+          <Pagination
+            data={gnomesToShow}
+            RenderComponent={Gnome}
+            title="Gnomes"
+            pageLimit={5}
+            dataLimit={10}
+          />
+        ) : (
+          <h1>No Gnomes to display</h1>
+        )}
       </div>
     </>
   );

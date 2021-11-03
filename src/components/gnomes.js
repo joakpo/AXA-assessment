@@ -8,7 +8,7 @@ const Gnome = ({
   weight,
   height,
   hair_color,
-  profesions,
+  professions,
   friends,
 }) => (
   <div className="gnome">
@@ -24,7 +24,7 @@ const Gnome = ({
       <p>Weight: {weight}</p>
       <p>Height: {height}</p>
       <p>Hair color: {hair_color}</p>
-      <p>Profesions: {profesions}</p>
+      <p>Profesions: {professions}</p>
       <p>Friends: {friends}</p>
     </div>
   </div>
