@@ -95,7 +95,7 @@ code {
 }
 
 .paginationItem {
-  background: #fff;
+  background: #373b69;
   border: 2px solid #666;
   padding: 10px 15px;
   border-radius: 50%;
@@ -115,10 +115,10 @@ code {
 
 .prev,
 .next {
-  background: #fff;
+  background: #373b69;
   border: none;
   padding: 10px;
-  color: blue;
+  color: black;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
   margin: 0 10px;
   cursor: pointer;
@@ -134,5 +134,5 @@ code {
 .next.disabled {
   pointer-events: none;
   box-shadow: none;
-  color: #999;
+  color: gray;
 }
