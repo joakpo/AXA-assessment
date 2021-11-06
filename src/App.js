@@ -37,7 +37,7 @@ function App() {
             RenderComponent={Gnome}
             title="Gnomes"
             pageLimit={5}
-            dataLimit={10}
+            dataLimit={12}
           />
         ) : (
           <h1>No Gnomes to display</h1>
