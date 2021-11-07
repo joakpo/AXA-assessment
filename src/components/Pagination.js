@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
-  const [pages] = useState(Math.round(data.length / dataLimit));
+  const pages = Math.ceil(data.length / dataLimit);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -22,14 +22,16 @@ function Pagination({ data, RenderComponent, pageLimit, dataLimit }) {
   }
 
   const getPaginatedData = () => {
-    const startIndex = currentPage * dataLimit - dataLimit;
-    const endIndex = startIndex + dataLimit;
+    const endIndex = currentPage * dataLimit;
+    const startIndex = endIndex - dataLimit;
     return data.slice(startIndex, endIndex);
   };
 
   const getPaginationGroup = () => {
+    const pageSurplus = pages % pageLimit;
+    const amount = currentPage > pages - pageSurplus ? pageSurplus : pageLimit;
     let start = Math.floor((currentPage - 1) / pageLimit) * pageLimit;
-    return new Array(pageLimit).fill().map((_, idx) => start + idx + 1);
+    return new Array(amount).fill().map((_, idx) => start + idx + 1);
   };
 
   return (
