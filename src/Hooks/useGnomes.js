@@ -9,7 +9,6 @@ function useGnomes() {
     fetch(JSON_URL)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setGnomes(data.Brastlewark);
       });
   }, []);

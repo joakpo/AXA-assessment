@@ -13,11 +13,16 @@ body {
   flex-direction: column;
 }
 
-header {
-  background-color: #373b69;
+.townName {
+  color: antiquewhite;
   padding: 1rem;
+}
+
+.headers {
+  background-color: #373b69;
+  top: 40px;
+  left: 40px;
   display: flex;
-  justify-content: flex-end;
 }
 
 .search {
@@ -27,8 +32,11 @@ header {
   border-radius: 50px;
   font-family: inherit;
   font-size: 1.2rem;
-  padding: 0.5rem 1.5rem;
+  padding: 0 25px 0 200px;
   opacity: 0.55;
+  position: absolute;
+  right: 10px;
+  top: 50px;
 }
 
 code {
@@ -64,15 +72,15 @@ code {
 }
 
 .gnome-info {
-  background-color: white;
-  color: #0f0f3d;
+  background-color: #373b69;
+  color: black;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   padding: 1rem;
   transform: translateY(102%); /*Making the info going up*/
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out; /*Delaying the going up info 0.3 seconds*/
   overflow: auto;
   max-height: 100%;
   border-top-left-radius: 3px;

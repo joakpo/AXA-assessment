@@ -19,8 +19,9 @@ function App() {
 
   return (
     <>
-      <header>
-        <form onSubmit={(e) => e.preventDefault()}>
+      <div className="headers">
+        <h1 className="townName">Brastlewark</h1>
+        <form className="searchForm" onSubmit={(e) => e.preventDefault()}>
           <input
             className="search"
             type="search"
@@ -29,7 +30,7 @@ function App() {
             onChange={handleOnChange}
           />
         </form>
-      </header>
+      </div>
       <div>
         {gnomesToShow.length > 0 ? (
           <Pagination

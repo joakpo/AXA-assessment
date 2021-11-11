@@ -1,5 +1,11 @@
 import React from "react";
 
+function objectItems(objt) {
+  for (let i = 0; i > objt.length; i++) {
+    return objt[i] + ", ";
+  }
+}
+
 const Gnome = ({
   id,
   name,
@@ -24,8 +30,8 @@ const Gnome = ({
       <p>Weight: {weight}</p>
       <p>Height: {height}</p>
       <p>Hair color: {hair_color}</p>
-      <p>Profesions: {professions}</p>
-      <p>Friends: {friends}</p>
+      <p>Professions: {objectItems(professions)}</p>
+      <p>Friends: {objectItems(friends)}</p>
     </div>
   </div>
 );
