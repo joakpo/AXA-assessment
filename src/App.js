@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import Gnome from "./components/gnomes";
 import Pagination from "./components/Pagination";
-import useGnomes from "./Hooks/useGnomes";
+import useGnomes from "./hooks/useGnomes";
 
 function App() {
   const gnomes = useGnomes();
