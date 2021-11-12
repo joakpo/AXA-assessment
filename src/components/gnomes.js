@@ -1,9 +1,7 @@
 import React from "react";
 
-function objectItems(objt) {
-  for (let i = 0; i > objt.length; i++) {
-    return objt[i] + ", ";
-  }
+function reduceToString(previous, current) {
+  return `${previous}, ${current}`;
 }
 
 const Gnome = ({
@@ -30,8 +28,17 @@ const Gnome = ({
       <p>Weight: {weight}</p>
       <p>Height: {height}</p>
       <p>Hair color: {hair_color}</p>
-      <p>Professions: {objectItems(professions)}</p>
-      <p>Friends: {objectItems(friends)}</p>
+      {professions.length > 0 ? (
+        <p>Professions: {professions.reduce(reduceToString)}</p>
+      ) : (
+        <p>This gnome has no profession</p>
+      )}
+      {friends.length > 0 ? (
+        <p>Friends: {friends.reduce(reduceToString)}</p>
+      ) : (
+        <p>This gnome has no friends</p>
+      )}
+      <p>Gender: {Math.random() > 0.5 ? "Male" : "Female"}</p>
     </div>
   </div>
 );
