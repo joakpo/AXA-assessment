@@ -1,4 +1,4 @@
-#AXA Assessment frontend developer
+# AXA Assessment frontend developer
 
 A gnome menu for players in Brastlewark developed in React.
 
@@ -30,7 +30,7 @@ Launches the test runner in the interactive watch mode.
 
 Builds the app for production.
 
-##How to use it
+## How to use it
 
 You can find any gnome in the Brastlewark town and it's information. You just have to hover over the gnome and the information will emerge.
 
