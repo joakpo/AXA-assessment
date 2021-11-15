@@ -34,10 +34,10 @@ Builds the app for production.
 
 You can find any gnome in the Brastlewark town and it's information. You just have to hover over the gnome and the information will emerge.
 
-![Desktop](firstpic.png)
+![firstpic](https://user-images.githubusercontent.com/36108774/141829202-ea5cf411-6c1a-4445-97b9-2887d3132136.png)
 
-![Desktop](secondpic.png)
+![secondpic](https://user-images.githubusercontent.com/36108774/141829262-d2516ab4-b450-4085-adbc-75c70a27ea09.png)
 
 Even you could search for a specific gnome by name for example.
 
-![Desktop](thirdpic.png)
+![thirdpic](https://user-images.githubusercontent.com/36108774/141829289-1864cab9-8064-4d89-9d43-dc89f4dc9e70.png)
